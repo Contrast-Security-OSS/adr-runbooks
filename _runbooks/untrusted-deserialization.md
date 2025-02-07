@@ -38,6 +38,7 @@ What is the “outcome” of the event you are triaging? (click to proceed)
 To verify this is a true positive, review the following attributes of the event for common indicators:  
 
 - Did the application deserialize data from user controllable input?
+- Does the payload contain a [known gadget](https://github.com/frohoff/ysoserial)?
 - Does the decoded payload look like a binary object?
 - Does the payload represent a Java serialized object? (It should start with 'rO0AB')
 - Does the payload represent a .NET serialized object? (It should start with 'AAEAAAD')
@@ -49,7 +50,10 @@ To verify this is a true positive, review the following attributes of the event 
 Examples:
 
 - `.Net - AAEAAAD/////AQAAAAAAAAAMAgAAAF9TeXN0ZW0u[...]0KPC9PYmpzPgs=`
-- `Java - rO0ABXNyABFqYXZhL[...]D//////////3QACmdvb2GUuY29teA==`  
+- `Java - rO0ABXNyABFqYXZhL[...]D//////////3QACmdvb2GUuY29teA==`
+- `Known Java Gadget - com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl`
+- `Known Java Gadget - org.apache.commons.collections.functors.InvokerTransformer`
+- `Known Java Gadget - org.springframework.beans.factory.ObjectFactory`
 
 \
 Does the event appear to be a true positive? (click to proceed)  
@@ -66,6 +70,7 @@ Does the event appear to be a true positive? (click to proceed)
 To verify this is a true positive, review the following attributes of the event:
 
 - Did the application deserialize data from user controllable input?
+- Does the payload contain a [known gadget](https://github.com/frohoff/ysoserial)?
 - Does the decoded payload look like a binary object?
 - Does the payload represent a Java serialized object? (It should start with 'rO0AB')
 - Does the payload represent a .NET serialized object? (It should start with 'AAEAAAD')
@@ -76,7 +81,10 @@ To verify this is a true positive, review the following attributes of the event:
 Examples:
 
 - `.Net - AAEAAAD/////AQAAAAAAAAAMAgAAAF9TeXN0ZW0u[...]0KPC9PYmpzPgs=`
-- `Java - rO0ABXNyABFqYXZhL[...]D//////////3QACmdvb2GUuY29teA==`  
+- `Java - rO0ABXNyABFqYXZhL[...]D//////////3QACmdvb2GUuY29teA==`
+- `Known Java Gadget - com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl`
+- `Known Java Gadget - org.apache.commons.collections.functors.InvokerTransformer`
+- `Known Java Gadget - org.springframework.beans.factory.ObjectFactory`
 
 
 \
@@ -261,4 +269,4 @@ To review, a Benign True Positive occurs when an application relies on vulnerabl
   - **User Notification:** Notify affected users if there was a data breach.
 - **Review and Improve**
   - **Review Response:** Conduct a post-mortem to review the response and identify improvement areas.
-  - **Enhance Security Posture:** Implement additional security measures and improve monitoring.  
+  - **Enhance Security Posture:** Implement additional security measures and improve monitoring.
