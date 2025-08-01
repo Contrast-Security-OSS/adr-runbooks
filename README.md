@@ -9,6 +9,7 @@ This repository contains detailed runbooks for responding to various security in
 - [JNDI Injection](_runbooks/jndi-injection.md) - Responding to JNDI injection attempts targeting Java applications
 - [SQL Injection](_runbooks/sql-injection.md) - Managing SQL injection attacks against database systems
 - [Expression Language Injection](_runbooks/expression-language-injection.md) - Addressing expression language injection vulnerabilities
+- [Code Injection](_runbooks/code-injection.md) - Handling code injection attacks that execute arbitrary code
 
 ### Access Control & Traversal
 - [Path Traversal](_runbooks/path-traversal.md) - Handling attempts to access files outside intended directories
