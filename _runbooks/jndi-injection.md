@@ -33,7 +33,7 @@ What is the “outcome” of the event you are triaging? (click to proceed)
 
 ## Exploited
 
-An "Exploited" outcome means Contrast detected an input coming into an application that is then used to create a JNDI Query with the protocol RMI or LDAP.  
+An "Exploited" outcome means Contrast detected a JNDI Query with the protocol RMI or LDAP, which did not match the defined "PROVIDER_URL".
 
 To verify this is a true positive, review the following attributes of the event for common indicators:  
 
@@ -58,7 +58,7 @@ Does the event appear to be a true positive? (click to proceed)
 
 ## Blocked
 
-"Blocked" outcome means Contrast detected an input coming into an application that is then used to create a JNDI Query with the protocol RMI or LDAP and Contrast stopped the Query from executing.  
+"Blocked" outcome means Contrast detected a JNDI Query with the protocol RMI or LDAP, which did not match the defined "PROVIDER_URL", and Contrast stopped the Query from executing.
 
 To verify this is a true positive, review the following attributes of the event:
 
