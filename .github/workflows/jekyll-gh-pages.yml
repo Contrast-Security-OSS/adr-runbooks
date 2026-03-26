@@ -31,7 +31,7 @@ jobs:
           destination: ./_site
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: Contrast-Security-OSS/upload-pages-artifact@24d45ff20bb020d94ec2d54d80dc54920f42eff8
 
   deploy:
     environment:
